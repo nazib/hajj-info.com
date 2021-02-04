@@ -17,8 +17,7 @@ import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
+#BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -26,11 +25,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG", "False") == "False"
+DEBUG = os.getenv("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "0.0.0.0:8080,localhost").split(",")
-#DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
-DEVELOPMENT_MODE = "True"
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
+#DEVELOPMENT_MODE = "True"
 # Application definition
 
 INSTALLED_APPS = [
@@ -76,7 +75,7 @@ WSGI_APPLICATION = 'hajjinfo.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
+'''
 DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.sqlite3",
@@ -99,7 +98,7 @@ elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
         "default": dj_database_url.parse(os.environ.get("DATABASE_URL")),
     }
 
-'''
+
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
