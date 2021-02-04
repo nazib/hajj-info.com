@@ -9,5 +9,35 @@ def index(request):
 
 '''
 def homepage(request):
-    #template = loader.get_template("rankapp/page.html")
-    return render(request,"page.html",{})
+    return render(request,"index.html",{})
+
+def howto(request):
+    return render(request,"howto.html",{})
+
+def history(request):
+    return render(request,"history.html",{})
+
+def QandH(request):
+    return render(request,"Q&H.html",{})
+
+def visa(request):
+    return render(request,"visa.html",{})
+
+def agents(request):
+    return render(request,"agents.html",{})
+
+def hotels(request):
+    return render(request,"hotels.html",{})
+
+def rentals(request):
+    return render(request,"rentals.html",{})
+
+def flights(request):
+    return render(request,"flights.html",{})
+
+def blog(request):
+    return render(request,"blog.html",{})
+
+
+
+
