@@ -12,4 +12,4 @@ urlpatterns = [
     path('rental/', views.rentals , name='rentals'),
     path('flights/', views.flights , name='flights'),
     path('blog/', views.rentals , name='blog'),
-]
+] 
