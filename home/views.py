@@ -11,7 +11,7 @@ def index(request):
 
 '''
 def homepage(request):
-    return render(request,"index.html",{})
+    return render(request,"home.html",{})
 
 def howto(request):
     return render(request,"howto.html",{})

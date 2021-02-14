@@ -13,9 +13,25 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 
-
 {% block content %}
-  <h1>CountryWise Hajj Visa information</h1>
+  <h1 id="title", align="center">Select the country from which you want perform Hajj</h1>
+  <div>
+    <select class="combobox">
+      <option></option>
+      <option value="PA">Pennsylvania</option>
+      <option value="CT">Connecticut</option>
+      <option value="NY">New York</option>
+      <option value="MD">Maryland</option>
+      <option value="VA">Virginia</option>
+    </select>
+</div>
+<button onclick="test()">Change Title</button>
+<script>
+  function test(){
+    document.getElementById('title').innerHTML='helloJavaScript'
+  }
+</script>
+
 {% endblock %}
 
 </html>
