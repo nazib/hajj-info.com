@@ -13,3 +13,4 @@ psycopg2-binary==2.8.6
 pytz 
 sqlparse
 Werkzeug==1.0.1
+django-google-analytics-app 5.0.3
