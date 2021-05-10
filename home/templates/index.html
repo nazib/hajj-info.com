@@ -11,8 +11,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+{% load google_analytics_tags %}
+<div style="display:none">
+    <img src="{% google_analytics %}" width="0" height="0" />
+</div>
+
 </head>
 <body>
+ 
   {% block Head %}  
   <div class="jumbotron text-center"> 
     <h1>بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h1>
@@ -91,6 +97,7 @@
     </div>
   </div>
 
+ 
 </body>
 </html>
 

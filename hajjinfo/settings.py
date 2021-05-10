@@ -32,6 +32,12 @@ ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split("
 DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "True") == "True"
 # SECURITY WARNING: don't run with debug turned on in production!
 
+### Google Analytics
+GOOGLE_ANALYTICS = {
+    'google_analytics_id': 'G-GD7T4JQDDP',
+}
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -42,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
+    'google_analytics',
 ]
 
 MIDDLEWARE = [

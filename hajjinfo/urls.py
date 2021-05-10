@@ -19,10 +19,12 @@ from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
 from home import views
+import google_analytics
 urlpatterns = [
     path('', views.homepage,name='home'),
     path('home/', include('home.urls')),
     path('admin/', admin.site.urls),
+    path('djga/', include('google_analytics.urls')),
 ]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
 
 ## 
